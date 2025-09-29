@@ -8,10 +8,10 @@ html {
   /* apply a natural box layout model to all elements */
   box-sizing: border-box;
   background-color: var(--global-bg-color);
-  font-size: 16px;
+  font-size: 12px;
 
   @include breakpoint($medium) {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   -webkit-text-size-adjust: 100%;
@@ -70,6 +70,11 @@ a {
   color: var(--global-link-color);
 }
 
+.underline {
+  text-decoration: none !important;
+  border-bottom: 2px solid var(--link-underline-color) !important;
+}
+
 /* Apply focus state */
 
 a:focus {
@@ -81,6 +86,7 @@ a:focus {
 a:hover,
 a:active {
   outline: 0;
+  color: var(--link-underline-color);
 }
 
 /* Prevent sub and sup affecting line-height in all browsers */
@@ -176,4 +182,8 @@ input[type="search"]::-webkit-search-cancel-button {
 textarea {
   overflow: auto; /* remove vertical scrollbar in IE6-9*/
   vertical-align: top; /* readability and alignment cross-browser*/
+}
+
+ul li {
+  list-style-type: square
 }
