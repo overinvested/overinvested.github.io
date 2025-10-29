@@ -1,0 +1,20 @@
+---
+layout: archive
+title: "Food"
+permalink: /food/
+redirect_from:
+  - /recipes/
+---
+
+<p>I am extremely passionate about cooking. I started taking it seriously sometime around the age of 16. I am providing a comprehensive view into my culinary journey so that you can learn from my experiences.</p>
+
+<p>Being in school, whether undergrad or graduate, often forces people to limit themselves to struggle meals that are either quite bad for you or are questionable taste-wise. There is no reason you should have to sacrifice when it comes to the food you prepare for yourself. Simply leveling up your technique can be enough to turn mediocre meals fantastic. I am not going to claim that all recipes you find here will be nearly as affordable as those meals. However, almost all of these recipes will leave you with enough meals for somewhere from half of a week to an entire week. Any that won't will be <i>very</i> inexpensive to compensate as I also budget my own cooking (though perhaps not to the degree some others do).</p>
+
+{% assign pdf_path = "/files/Cookbook.pdf" %}
+{% assign file = site.static_files | where: "path", pdf_path | first %}
+{% if file %}
+  <object data="{{ pdf_path }}" width="1000" height="1000" type='application/pdf'></object>
+{% else %}
+  <p>This page will be updated soon with a pdf of what is essentially a cookbook containing all of the recipes I have found/modified/created since I began cooking.</p>
+{% endif %}
+
